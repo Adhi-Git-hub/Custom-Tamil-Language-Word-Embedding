@@ -3,11 +3,12 @@ import os
 import gzip
 
 # Path to preprocessed files directory
-preprocessed_dir = 'C:\\Users\\student\\Documents\\adhi-p3'
-initial_vocab_path = 'C:\\Users\\student\\Documents\\invoc-adhi-p4\\initial_vocab.model'
+preprocessed_dir = 'path\\preprocesss_output_path'
+initial_vocab_path = 'path\\initial_vocab.model'
 
 # Build initial vocabulary model
 def build_initial_vocabulary(directory, sample_size=1):
+    # word2vec model
     model_sg = Word2Vec(vector_size=300, window=5, min_count=5, workers=4, sg=1)
     
     file_count = 0
