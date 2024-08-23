@@ -9,8 +9,12 @@ This repository contains the complete pipeline for building a custom Tamil word 
 - Online Training: Supports incremental training, allowing the model to be updated with new data without retraining from scratch.
 - Comprehensive Workflow: From preprocessing text to building initial vocabulary, training the embedding model, and converting it to a binary format for efficient storage.
   # Getting Started
+  ## Prerequisites
+  Before running the scripts, ensure you have the required Python libraries installed. You can install them using pip
+  
       ```base
-       pip install gensim
+           pip install gensim
+  
    ## Project Structure
     - Preprocessing: The initial step where raw text data is cleaned and tokenized.
     - Initial Vocabulary: Creates the initial vocabulary from the preprocessed data.
