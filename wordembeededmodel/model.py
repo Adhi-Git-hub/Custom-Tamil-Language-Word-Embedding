@@ -4,8 +4,8 @@ import gzip
 import time
 
 # Paths to directories
-preprocessed_dir = 'C:\\Users\\student\\Documents\\adhi-p3'
-vocab_model_path = 'C:\\Users\\student\\Documents\\adhi-p4\\updated_vocab.model'
+preprocessed_dir = 'path\\preprocesss_output_path'
+vocab_model_path = 'path\\finalvoc\\updated_vocab.model'
 
 # Load the vocabulary model
 model_sg = Word2Vec.load(vocab_model_path)
@@ -40,6 +40,6 @@ def train_model(directory, model):
 train_model(preprocessed_dir, model_sg)
 
 # Save the trained model
-model_path = 'C:\\Users\\student\\Documents\\adhi-we-p5\\tamil_word2vec_sg.model'
+model_path = 'path\\model\\tamil_word2vec_sg.model'
 model_sg.save(model_path)
 print(f"Model training completed and saved to {model_path}")
