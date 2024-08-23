@@ -3,9 +3,9 @@ import os
 import gzip
 
 # Paths
-preprocessed_dir = 'C:\\Users\\student\\Documents\\adhi-p3'
-initial_vocab_path = 'C:\\Users\\student\\Documents\\invoc-adhi-p4\\initial_vocab.model'
-finalvocdir = 'C:\\Users\\student\\Documents\\adhi-p4'
+preprocessed_dir = 'path\\preprocesss_output_path'
+initial_vocab_path = 'path\\initial_vocab.model'
+finalvocdir = 'path\\finalvoc'
 updated_vocab_path = os.path.join(finalvocdir, "updated_vocab.model")
 
 # Load initial model
@@ -20,7 +20,7 @@ def update_vocabulary(directory, model):
             if file.endswith('.txt.gz'):
                 file_path = os.path.join(root, file)
                 print(f"Processing file for incremental vocab: {file_path}")
-                print(i)
+                print(i)  #for printing file count
                 i += 1
                 with gzip.open(file_path, 'rt', encoding='utf-8') as f:
                     chunk = f.read()
