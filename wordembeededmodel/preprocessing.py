@@ -3,8 +3,8 @@ import re
 import gzip
 
 # Paths to the directories
-input_dir = 'C:\\Users\\student\\Documents\\adhi-p1\\wordembdataset'
-output_dir = 'C:\\Users\\student\\Documents\\adhi-p3'
+input_dir = 'path\\wordembdataset'
+output_dir = 'path\\preprocesss_output_path'
 
 # Regular expression to match Tamil words
 tamil_word_regex = re.compile(r'[\u0B80-\u0BFF]+')
@@ -28,7 +28,7 @@ def preprocess_and_save(directory, output_directory, chunk_size=50000):
         for file in files:
             file_path = os.path.join(root, file)
             print(f"Processing file: {file_path}")
-            print(i)
+            print(i)  #file count
             i+=1
             with open(file_path, 'r', encoding='utf-8') as f:
                 for line in f:
